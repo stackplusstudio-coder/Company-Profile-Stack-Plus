@@ -1,0 +1,128 @@
+"use client"
+
+import { Zap, Shield, Users, Award } from "lucide-react"
+import { useI18n } from "@/lib/i18n/context"
+
+const features = [
+  {
+    icon: Zap,
+    titleEn: "Fast Delivery",
+    titleId: "Pengiriman Cepat",
+    descEn:
+      "We deliver high-quality work on time, every time. Our agile process ensures rapid iteration and timely launches.",
+    descId:
+      "Kami memberikan hasil kerja berkualitas tepat waktu. Proses agile kami memastikan iterasi cepat dan peluncuran tepat waktu.",
+  },
+  {
+    icon: Shield,
+    titleEn: "Secure & Reliable",
+    titleId: "Aman & Andal",
+    descEn: "Security is our priority. We build robust solutions with best practices in security and data protection.",
+    descId:
+      "Keamanan adalah prioritas kami. Kami membangun solusi kokoh dengan praktik terbaik dalam keamanan dan perlindungan data.",
+  },
+  {
+    icon: Users,
+    titleEn: "Expert Team",
+    titleId: "Tim Ahli",
+    descEn: "Our talented team brings years of experience across design, development, and digital strategy.",
+    descId: "Tim berbakat kami membawa pengalaman bertahun-tahun di bidang desain, pengembangan, dan strategi digital.",
+  },
+  {
+    icon: Award,
+    titleEn: "Award Winning",
+    titleId: "Pemenang Penghargaan",
+    descEn: "Our work has been recognized by industry leaders for excellence in design and innovation.",
+    descId: "Karya kami telah diakui oleh pemimpin industri untuk keunggulan dalam desain dan inovasi.",
+  },
+]
+
+export function WhyChooseSection() {
+  const { t, locale } = useI18n()
+
+  return (
+    <section className="relative py-20 md:py-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+          {/* Content */}
+          <div>
+            <h2 className="font-display text-balance text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl">
+              {t.about.whyChoose}
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">{t.about.whyChooseSubtitle}</p>
+
+            <div className="mt-10 grid gap-6 sm:grid-cols-2">
+              {features.map((feature) => (
+                <div key={feature.titleEn} className="group">
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#0066FF]/10 text-[#0066FF] transition-colors group-hover:bg-[#0066FF] group-hover:text-white">
+                      <feature.icon className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold">{locale === "en" ? feature.titleEn : feature.titleId}</h3>
+                      <p className="mt-1 text-sm text-muted-foreground leading-relaxed">
+                        {locale === "en" ? feature.descEn : feature.descId}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Visual */}
+          <div className="relative">
+            <div className="relative aspect-square overflow-hidden rounded-3xl border border-border/50 bg-card">
+              {/* Decorative elements */}
+              <div className="absolute inset-0 bg-[linear-gradient(to_right,oklch(0.55_0.24_255/0.05)_1px,transparent_1px),linear-gradient(to_bottom,oklch(0.55_0.24_255/0.05)_1px,transparent_1px)] bg-[size:40px_40px]" />
+              <div className="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#0066FF]/20 blur-[60px]" />
+
+              {/* Floating cards */}
+              <div className="absolute left-8 top-12 animate-float rounded-xl border border-border/50 bg-background/80 p-4 shadow-xl backdrop-blur-sm">
+                <div className="flex items-center gap-3">
+                  <div className="h-10 w-10 rounded-lg bg-[#0066FF]" />
+                  <div>
+                    <div className="h-3 w-20 rounded bg-foreground/20" />
+                    <div className="mt-2 h-2 w-14 rounded bg-muted-foreground/20" />
+                  </div>
+                </div>
+              </div>
+
+              <div className="animation-delay-200 absolute bottom-20 right-8 animate-float rounded-xl border border-border/50 bg-background/80 p-4 shadow-xl backdrop-blur-sm">
+                <div className="flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-green-500/20 text-green-500">
+                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <div className="h-3 w-24 rounded bg-foreground/20" />
+                    <div className="mt-2 h-2 w-16 rounded bg-muted-foreground/20" />
+                  </div>
+                </div>
+              </div>
+
+              <div className="animation-delay-400 absolute right-12 top-1/3 animate-float rounded-xl border border-border/50 bg-background/80 p-4 shadow-xl backdrop-blur-sm">
+                <div className="h-8 w-32 rounded bg-gradient-to-r from-[#0066FF] to-[#00AAFF]" />
+              </div>
+
+              {/* Center logo */}
+              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                <img
+                  src="/images/primary-20logo-202-20png.png"
+                  alt="StackPlus"
+                  className="h-24 w-24 object-contain dark:hidden"
+                />
+                <img
+                  src="/images/primary-20logo-201-20png.png"
+                  alt="StackPlus"
+                  className="hidden h-24 w-24 object-contain dark:block"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
