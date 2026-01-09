@@ -68,8 +68,8 @@ export function HeroSection() {
           {/* Stats */}
           <div className="mt-16 grid grid-cols-2 gap-8 md:grid-cols-4">
             {[
-              { value: "11+", label: "Projects Delivered" },
-              { value: "7+", label: "Happy Clients" },
+              { value: "11", label: "Projects Delivered" },
+              { value: "7", label: "Happy Clients" },
               { value: "1+", label: "Years Experience" },
               { value: "3", label: "Team Members" },
             ].map((stat) => (
