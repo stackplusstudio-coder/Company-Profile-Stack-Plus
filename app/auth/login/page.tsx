@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
 import { createClient } from "@/lib/supabase/client"
@@ -18,23 +18,87 @@ export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState(false)
+  const [supabase, setSupabase] = useState<ReturnType<typeof createClient> | null>(null)
   const router = useRouter()
+
+  useEffect(() => {
+    try {
+      const client = createClient()
+      setSupabase(client)
+      console.log("[v0] Supabase client initialized successfully")
+    } catch (err) {
+      console.error("[v0] Failed to initialize Supabase client:", err)
+      setError("Gagal menginisialisasi koneksi. Periksa konfigurasi environment variables.")
+    }
+  }, [])
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault()
-    const supabase = createClient()
+
+    if (!supabase) {
+      setError("Supabase client belum siap. Silakan refresh halaman.")
+      return
+    }
+
     setIsLoading(true)
     setError(null)
 
     try {
-      const { error } = await supabase.auth.signInWithPassword({
+      console.log("[v0] Attempting login with email:", email)
+
+      // Test basic connectivity with a simple health check
+      console.log("[v0] Testing Supabase connectivity...")
+      
+      // Try to get the current session first (this is a lightweight request)
+      const { data: sessionData, error: sessionError } = await supabase.auth.getSession()
+      
+      if (sessionError) {
+        console.error("[v0] Session check failed:", sessionError)
+        console.error("[v0] Session error details:", JSON.stringify(sessionError, null, 2))
+        
+        // Check if it's a network error
+        if (sessionError.message.includes("Failed to fetch") || 
+            sessionError.message.includes("NetworkError") ||
+            sessionError.message.includes("ECONNREFUSED")) {
+          throw new Error("Tidak dapat terhubung ke Supabase. Periksa: 1) Koneksi internet, 2) URL Supabase di .env.local, 3) CORS settings di dashboard Supabase.")
+        }
+        throw new Error(`Koneksi ke Supabase gagal: ${sessionError.message}`)
+      }
+      
+      console.log("[v0] Session check passed")
+
+      const { data, error } = await supabase.auth.signInWithPassword({
         email,
         password,
       })
-      if (error) throw error
+
+      console.log("[v0] Login response - data:", data, "error:", error)
+
+      if (error) {
+        console.error("[v0] Login error:", error.message)
+        console.error("[v0] Login error details:", JSON.stringify(error, null, 2))
+        
+        // Provide more specific error messages
+        if (error.message.includes("Failed to fetch")) {
+          throw new Error("Tidak dapat terhubung ke server Supabase. Pastikan URL dan kunci API di .env.local sudah benar.")
+        } else if (error.message.includes("Invalid login credentials")) {
+          throw new Error("Email atau password salah.")
+        } else if (error.message.includes("Email not confirmed")) {
+          throw new Error("Email belum dikonfirmasi. Silakan cek inbox Anda.")
+        } else if (error.message.includes("Invalid api")) {
+          throw new Error("Kunci API Supabase tidak valid. Periksa NEXT_PUBLIC_SUPABASE_ANON_KEY di .env.local")
+        } else {
+          throw new Error(error.message)
+        }
+      }
+
+      console.log("[v0] Login successful, redirecting to /admin")
       router.push("/admin")
+      router.refresh()
     } catch (error: unknown) {
-      setError(error instanceof Error ? error.message : "An error occurred")
+      const errorMessage = error instanceof Error ? error.message : "Terjadi kesalahan"
+      console.error("[v0] Caught error:", errorMessage)
+      setError(errorMessage)
     } finally {
       setIsLoading(false)
     }
@@ -58,7 +122,7 @@ export default function LoginPage() {
         <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
           <CardHeader className="space-y-1 text-center">
             <CardTitle className="font-display text-2xl">Admin Login</CardTitle>
-            <CardDescription>Sign in to access the admin dashboard</CardDescription>
+            <CardDescription>Masuk untuk mengakses dashboard admin</CardDescription>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleLogin} className="space-y-4">
@@ -98,21 +162,25 @@ export default function LoginPage() {
 
               {error && <div className="rounded-lg bg-destructive/10 p-3 text-sm text-destructive">{error}</div>}
 
-              <Button type="submit" className="w-full bg-[#0066FF] text-white hover:bg-[#0052CC]" disabled={isLoading}>
+              <Button
+                type="submit"
+                className="w-full bg-[#0066FF] text-white hover:bg-[#0052CC]"
+                disabled={isLoading || !supabase}
+              >
                 {isLoading ? (
                   <>
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Signing in...
+                    Sedang masuk...
                   </>
                 ) : (
-                  "Sign In"
+                  "Masuk"
                 )}
               </Button>
             </form>
 
             <div className="mt-6 text-center text-sm text-muted-foreground">
               <Link href="/" className="hover:text-[#0066FF]">
-                Back to website
+                Kembali ke website
               </Link>
             </div>
           </CardContent>
