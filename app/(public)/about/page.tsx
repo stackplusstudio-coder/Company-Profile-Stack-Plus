@@ -37,36 +37,28 @@ const values = [
 
 const team = [
   {
-    name: "Alex Rivera",
+    name: "M. Zauzan Adzani",
     positionEn: "CEO & Founder",
     positionId: "CEO & Pendiri",
-    bioEn: "Visionary leader with 15+ years in digital innovation.",
-    bioId: "Pemimpin visioner dengan 15+ tahun di inovasi digital.",
-    image: "/team-alex.jpg",
+    bioEn: "Visionary leader with 5+ years in digital innovation.",
+    bioId: "Pemimpin visioner dengan 5+ tahun di inovasi digital.",
+    image: "/zauzan.png",
   },
   {
-    name: "Emily Watson",
+    name: "Valent Destra Pasha",
     positionEn: "Creative Director",
     positionId: "Direktur Kreatif",
     bioEn: "Award-winning designer passionate about meaningful digital experiences.",
     bioId: "Desainer peraih penghargaan yang passionate menciptakan pengalaman digital.",
-    image: "/team-emily.jpg",
+    image: "/valen.png",
   },
   {
-    name: "David Kim",
+    name: "Budi Cahyono",
     positionEn: "Lead Developer",
     positionId: "Lead Developer",
     bioEn: "Full-stack expert specializing in modern web technologies.",
     bioId: "Ahli full-stack yang berspesialisasi dalam teknologi web modern.",
-    image: "/team-david.jpg",
-  },
-  {
-    name: "Jessica Chen",
-    positionEn: "UX Designer",
-    positionId: "Desainer UX",
-    bioEn: "User experience specialist focused on intuitive design.",
-    bioId: "Spesialis pengalaman pengguna yang fokus pada desain intuitif.",
-    image: "/team-jessica.jpg",
+    image: "/chyn.png",
   },
 ]
 
