@@ -4,12 +4,12 @@
 INSERT INTO site_settings (key, value_en, value_id) VALUES
   ('company_name', 'StackPlus', 'StackPlus'),
   ('tagline', 'Building Digital Excellence', 'Membangun Keunggulan Digital'),
-  ('email', 'hello@stackplus.com', 'hello@stackplus.com'),
-  ('phone', '+1 (555) 123-4567', '+62 21 1234 5678'),
-  ('address', '123 Tech Street, Silicon Valley, CA 94000', 'Jl. Teknologi No. 123, Jakarta Selatan, 12345'),
+  ('email', 'stackplustudio@gmail.com', 'stackplustudio@gmail.com'),
+  ('phone', '+62 813 9841 0264', '+62 813 9841 0264'),
+  ('address', 'Jl. Kentang 6 No.129, Tangerang, Banten', 'Jl. Potato 6 No. 129, Tangerang, Banten'),
   ('facebook', 'https://facebook.com/stackplus', 'https://facebook.com/stackplus'),
   ('twitter', 'https://twitter.com/stackplus', 'https://twitter.com/stackplus'),
-  ('instagram', 'https://instagram.com/stackplus', 'https://instagram.com/stackplus'),
+  ('instagram', 'https://www.instagram.com/stackplus.studio/', 'https://www.instagram.com/stackplus.studio/'),
   ('linkedin', 'https://linkedin.com/company/stackplus', 'https://linkedin.com/company/stackplus'),
   ('about_vision', 'To be the leading digital agency that transforms businesses through innovative technology solutions.', 'Menjadi agensi digital terkemuka yang mentransformasi bisnis melalui solusi teknologi inovatif.'),
   ('about_mission', 'We empower businesses with cutting-edge digital solutions, combining creativity with technical excellence to deliver exceptional results.', 'Kami memberdayakan bisnis dengan solusi digital mutakhir, menggabungkan kreativitas dengan keunggulan teknis untuk memberikan hasil yang luar biasa.')

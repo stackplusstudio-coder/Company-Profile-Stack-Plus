@@ -24,7 +24,7 @@ export function Footer() {
   const socialLinks = [
     { href: "#", icon: Facebook, label: "Facebook" },
     { href: "#", icon: Twitter, label: "Twitter" },
-    { href: "#", icon: Instagram, label: "Instagram" },
+    { href: "https://www.instagram.com/stackplus.studio/", icon: Instagram, label: "Instagram" },
     { href: "#", icon: Linkedin, label: "LinkedIn" },
   ]
 

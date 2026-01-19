@@ -50,22 +50,22 @@ export default function ContactPage() {
       icon: MapPin,
       labelEn: "Address",
       labelId: "Alamat",
-      valueEn: "123 Tech Street, Silicon Valley, CA 94000",
-      valueId: "Jl. Teknologi No. 123, Jakarta Selatan, 12345",
+      valueEn: "Jl. Potato 6 No. 129, Tangerang, Banten",
+      valueId: "Jl. Kentang 6 No.129, Tangerang, Banten",
     },
     {
       icon: Mail,
       labelEn: "Email",
       labelId: "Email",
-      valueEn: "hello@stackplus.com",
-      valueId: "hello@stackplus.com",
+      valueEn: "stackplustudio@gmail.com",
+      valueId: "stackplustudio@gmail.com",
     },
     {
       icon: Phone,
       labelEn: "Phone",
       labelId: "Telepon",
-      valueEn: "+1 (555) 123-4567",
-      valueId: "+62 21 1234 5678",
+      valueEn: "+62 813-9841-0264",
+      valueId: "+62 813-9841-0264",
     },
   ]
 

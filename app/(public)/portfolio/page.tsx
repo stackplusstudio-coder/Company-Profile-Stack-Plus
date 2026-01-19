@@ -8,17 +8,30 @@ import { ExternalLink } from "lucide-react"
 
 const portfolioItems = [
   {
-    titleEn: "E-Commerce Platform Redesign",
-    titleId: "Redesain Platform E-Commerce",
+    titleEn: "Arsicon Brand Rebranding",
+    titleId: "Rebranding Arsicon",
     descEn:
-      "Complete overhaul of an e-commerce platform focusing on user experience and conversion optimization. The project included a new design system, checkout flow improvements, and mobile optimization.",
+      "A comprehensive brand rebranding project for Arsicon focusing on strengthening brand identity as a Sharia-compliant interior and contractor company. The project included logo redesign, visual identity development, marketing assets, and brand consistency across digital and print media.",
     descId:
-      "Perombakan total platform e-commerce dengan fokus pada pengalaman pengguna dan optimasi konversi. Proyek ini mencakup sistem desain baru, perbaikan alur checkout, dan optimasi mobile.",
-    client: "ShopMax",
-    category: "Web Development",
-    technologies: ["Next.js", "React", "Tailwind CSS", "Stripe", "Supabase"],
-    slug: "shopmax-redesign",
-    image: "/modern-e-commerce-platform-dashboard.jpg",
+      "Proyek rebranding menyeluruh untuk Arsicon yang berfokus pada penguatan identitas merek sebagai perusahaan interior dan kontraktor berbasis syariah. Proyek ini mencakup redesain logo, pengembangan identitas visual, aset pemasaran, serta konsistensi brand pada media digital dan cetak.",
+    client: "Arsicon",
+    category: "Branding",
+    technologies: ["Adobe Illustrator", "Adobe Photoshop", "Brand Identity System"],
+    slug: "arsicon-rebranding",
+    image: "/ARSICON.png",
+  },
+  {
+    titleEn: "Initial Branding for Sket Creative",
+    titleId: "Membuat Branding Awal untuk Sket Creative",
+    descEn:
+      "An initial branding project for Sket Creative focused on establishing a strong and modern visual identity. The project included logo design, color palette development, typography selection, and basic brand applications to ensure consistency across digital and print media.",
+    descId:
+      "Proyek pembuatan branding awal untuk Sket Creative yang berfokus pada pembentukan identitas visual yang kuat dan modern. Proyek ini mencakup desain logo, pengembangan palet warna, pemilihan tipografi, serta penerapan dasar brand untuk memastikan konsistensi pada media digital dan cetak.",
+    client: "Sket Creative",
+    category: "Branding",
+    technologies: ["Adobe Illustrator", "Adobe Photoshop", "Brand Identity Design"],
+    slug: "sket-creative-initial-branding",
+    image: "/SKET.png",
   },
   {
     titleEn: "FinTech Mobile App",
