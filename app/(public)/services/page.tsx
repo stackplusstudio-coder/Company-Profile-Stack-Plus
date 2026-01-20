@@ -88,18 +88,18 @@ const services = [
   },
   {
     icon: BarChart,
-    titleEn: "Digital Marketing",
-    titleId: "Pemasaran Digital",
+    titleEn: "AI Chatbot",
+    titleId: "Chatbot AI",
     descEn:
-      "Comprehensive digital marketing solutions to grow your business. From social media to paid advertising, we create campaigns that deliver measurable results.",
+      "Build intelligent AI-powered chatbots to automate customer support, improve engagement, and streamline business processes across your digital platforms.",
     descId:
-      "Solusi pemasaran digital komprehensif untuk mengembangkan bisnis Anda. Dari media sosial hingga iklan berbayar, kami membuat kampanye yang memberikan hasil terukur.",
-    slug: "digital-marketing",
+      "Membangun chatbot berbasis AI untuk mengotomatisasi layanan pelanggan, meningkatkan interaksi, dan menyederhanakan proses bisnis di berbagai platform digital.",
+    slug: "ai-chatbot",
     features: [
-      { en: "Social Media Marketing", id: "Pemasaran Media Sosial" },
-      { en: "PPC Advertising", id: "Iklan PPC" },
-      { en: "Email Marketing", id: "Email Marketing" },
-      { en: "Content Marketing", id: "Content Marketing" },
+      { en: "Custom AI Chatbots", id: "Chatbot AI Kustom" },
+      { en: "WhatsApp & Website Integration", id: "Integrasi WhatsApp & Website" },
+      { en: "Workflow Automation", id: "Otomatisasi Alur Kerja" },
+      { en: "Knowledge Base Integration", id: "Integrasi Basis Pengetahuan" },
     ],
   },
 ]

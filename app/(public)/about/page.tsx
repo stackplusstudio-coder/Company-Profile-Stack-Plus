@@ -38,10 +38,10 @@ const values = [
 const team = [
   {
     name: "M. Zauzan Adzani",
-    positionEn: "CEO & Founder",
-    positionId: "CEO & Pendiri",
-    bioEn: "Visionary leader with 5+ years in digital innovation.",
-    bioId: "Pemimpin visioner dengan 5+ tahun di inovasi digital.",
+    positionEn: "UI/UX Designer",
+    positionId: "Desainer UI/UX",
+    bioEn: "Passionate UI/UX designer focused on creating intuitive digital experiences.",
+    bioId: "Desainer UI/UX yang fokus menciptakan pengalaman digital yang intuitif.",
     image: "/zauzan.png",
   },
   {
@@ -54,10 +54,10 @@ const team = [
   },
   {
     name: "Budi Cahyono",
-    positionEn: "Lead Developer",
-    positionId: "Lead Developer",
-    bioEn: "Full-stack expert specializing in modern web technologies.",
-    bioId: "Ahli full-stack yang berspesialisasi dalam teknologi web modern.",
+    positionEn: "Developer",
+    positionId: "Pengembang",
+    bioEn: "Developer specializing in modern web technologies.",
+    bioId: "Developer yang berspesialisasi dalam teknologi web modern.",
     image: "/chyn.png",
   },
 ]
