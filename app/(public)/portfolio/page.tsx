@@ -73,6 +73,19 @@ const portfolioItems = [
     image: "/chatbot.png",
   },
   {
+    titleEn: "Realtime Recognition System",
+    titleId: "Sistem Pengenalan Real-Time",
+    descEn:
+      "An AI-powered realtime recognition system capable of detecting and identifying objects, faces, or activities from live video streams. The system is optimized for low-latency processing, enabling instant insights for surveillance, monitoring, and intelligent automation use cases.",
+    descId:
+      "Sistem pengenalan real-time berbasis AI yang mampu mendeteksi dan mengidentifikasi objek, wajah, atau aktivitas dari streaming video secara langsung. Sistem ini dioptimalkan untuk latensi rendah sehingga memungkinkan insight instan untuk kebutuhan pengawasan, monitoring, dan otomasi cerdas.",
+    client: "Internal Project",
+    category: "Artificial Intelligence",
+    technologies: ["Python", "OpenCV", "TensorFlow", "YOLO", "FastAPI"],
+    slug: "realtime-recognition-system",
+    image: "/realtime.png",
+  },
+  {
     titleEn: "EatDeveloper Website",
     titleId: "Website EatDeveloper",
     descEn:
@@ -86,17 +99,17 @@ const portfolioItems = [
     image: "/development.png",
   },
   {
-    titleEn: "Real Estate Platform",
-    titleId: "Platform Properti",
+    titleEn: "Studuiotugasmu Platform",
+    titleId: "Platform Studuiotugasmu",
     descEn:
-      "A modern real estate marketplace with advanced search, virtual tours, mortgage calculator, and agent management features.",
+      "A web-based service platform designed to help students order academic assistance and task completion services. The website provides an easy-to-use ordering flow, secure communication, and clear project tracking to ensure efficiency, reliability, and user trust.",
     descId:
-      "Marketplace properti modern dengan pencarian canggih, tur virtual, kalkulator hipotek, dan fitur manajemen agen.",
-    client: "HomeSeek",
+      "Platform layanan berbasis web yang dirancang untuk membantu mahasiswa dan pelajar dalam memesan layanan bantuan akademik dan joki tugas. Website ini menyediakan alur pemesanan yang mudah, komunikasi yang aman, serta pelacakan progres tugas secara transparan untuk memastikan efisiensi dan kepercayaan pengguna.",
+    client: "Studuiotugasmu",
     category: "Web Development",
-    technologies: ["Next.js", "Three.js", "PostgreSQL", "Mapbox"],
-    slug: "homeseek-platform",
-    image: "/real-estate-platform.jpg",
+    technologies: ["Next.js", "React", "Tailwind CSS", "Supabase"],
+    slug: "studuiotugasmu-platform",
+    image: "/studiotugasmu.png",
   },
 ]
 
