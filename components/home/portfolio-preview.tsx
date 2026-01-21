@@ -8,34 +8,40 @@ import { useI18n } from "@/lib/i18n/context"
 
 const portfolioItems = [
   {
-    titleEn: "E-Commerce Platform Redesign",
-    titleId: "Redesain Platform E-Commerce",
-    descEn: "Complete overhaul of an e-commerce platform focusing on user experience.",
-    descId: "Perombakan total platform e-commerce dengan fokus pada pengalaman pengguna.",
-    client: "ShopMax",
-    technologies: ["Next.js", "Tailwind CSS", "Stripe"],
-    slug: "shopmax-redesign",
-    image: "/modern-e-commerce-platform-dashboard.jpg",
+    titleEn: "Arsicon Brand Rebranding",
+    titleId: "Rebranding Arsicon",
+    descEn:
+      "A comprehensive brand rebranding project for Arsicon focusing on strengthening brand identity as a Sharia-compliant interior and contractor company. The project included logo redesign, visual identity development, marketing assets, and brand consistency across digital and print media.",
+    descId:
+      "Proyek rebranding menyeluruh untuk Arsicon yang berfokus pada penguatan identitas merek sebagai perusahaan interior dan kontraktor berbasis syariah. Proyek ini mencakup redesain logo, pengembangan identitas visual, aset pemasaran, serta konsistensi brand pada media digital dan cetak.",
+    client: "Arsicon",
+    technologies: ["Adobe Illustrator", "Adobe Photoshop", "Brand Identity System"],
+    slug: "arsicon-rebranding",
+    image: "/ARSICON.png",
   },
   {
-    titleEn: "FinTech Mobile App",
-    titleId: "Aplikasi Mobile FinTech",
-    descEn: "Mobile banking application with focus on security and ease of use.",
-    descId: "Aplikasi perbankan mobile dengan fokus pada keamanan dan kemudahan.",
-    client: "NeoBank",
-    technologies: ["React Native", "Node.js"],
-    slug: "neobank-app",
-    image: "/fintech-mobile-app.png",
+    titleEn: "Hexavue Lab",
+    titleId: "Hexavue Lab",
+    descEn:
+      "Hexavue Lab is a creative digital agency specializing in website development and UI/UX design. The studio helps brands and businesses craft intuitive, user-centered digital experiences that blend aesthetics with functionality — ensuring every product not only looks good but works effectively for its users.",
+    descId:
+      "Hexavue Lab adalah agensi digital kreatif yang berfokus pada pengembangan website dan desain UI/UX. Studio ini membantu brand dan bisnis menciptakan pengalaman digital yang intuitif dan berorientasi pada pengguna, memadukan estetika dengan fungsionalitas agar setiap produk tidak hanya menarik secara visual, tetapi juga bekerja secara efektif.",
+    client: "Hexavue Lab",
+    technologies: ["Next.js", "React", "Tailwind CSS", "Figma"],
+    slug: "hexavue-lab",
+    image: "/Hexavue.png",
   },
   {
-    titleEn: "Corporate Brand Identity",
-    titleId: "Identitas Merek Korporat",
-    descEn: "Comprehensive brand identity for a multinational consulting firm.",
-    descId: "Identitas merek komprehensif untuk perusahaan konsultan multinasional.",
-    client: "Vertex Consulting",
-    technologies: ["Figma", "Adobe CC"],
-    slug: "vertex-branding",
-    image: "/corporate-brand-identity-design.jpg",
+    titleEn: "Creative Portfolio",
+    titleId: "Portofolio Kreatif",
+    descEn:
+      "A modern, responsive portfolio website developed for Anastasia Prameswari to showcase her photography and videography through a visually immersive interface, highlighting authentic visual storytelling, creativity, technical precision, and professional quality across every project.",
+    descId:
+      "Website portofolio modern dan responsif yang dikembangkan untuk Anastasia Prameswari guna menampilkan karya fotografi dan videografi melalui antarmuka visual yang imersif, menonjolkan storytelling visual yang autentik, kreativitas, presisi teknis, serta kualitas profesional di setiap proyek.",
+    client: "Anastasia Prameswari",
+    technologies: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
+    slug: "creative-portfolio",
+    image: "/photograph.png",
   },
 ]
 
