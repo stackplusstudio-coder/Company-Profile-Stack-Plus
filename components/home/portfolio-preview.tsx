@@ -72,7 +72,7 @@ export function PortfolioPreview() {
           {portfolioItems.map((item) => (
             <Link
               key={item.slug}
-              href={`/portfolio/${item.slug}`}
+              href={item.url}
               className="group relative overflow-hidden rounded-2xl border border-border/50 bg-card transition-all duration-300 hover:border-[#0066FF]/30 hover:shadow-xl hover:shadow-[#0066FF]/10"
             >
               {/* Image */}
