@@ -18,6 +18,7 @@ const portfolioItems = [
     technologies: ["Adobe Illustrator", "Adobe Photoshop", "Brand Identity System"],
     slug: "arsicon-rebranding",
     image: "/ARSICON.png",
+    url: "https://arsicon.com/",
   },
   {
     titleEn: "Hexavue Lab",
@@ -30,6 +31,7 @@ const portfolioItems = [
     technologies: ["Next.js", "React", "Tailwind CSS", "Figma"],
     slug: "hexavue-lab",
     image: "/Hexavue.png",
+    url: "https://hexavue.framer.ai",
   },
   {
     titleEn: "Creative Portfolio",
@@ -42,6 +44,7 @@ const portfolioItems = [
     technologies: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
     slug: "creative-portfolio",
     image: "/photograph.png",
+    url: "https://nastasiaapw.framer.website",
   },
 ]
 

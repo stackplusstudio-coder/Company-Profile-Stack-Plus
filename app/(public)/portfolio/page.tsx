@@ -19,6 +19,7 @@ const portfolioItems = [
     technologies: ["Adobe Illustrator", "Adobe Photoshop", "Brand Identity System"],
     slug: "arsicon-rebranding",
     image: "/ARSICON.png",
+    url: "https://arsicon.com/",
   },
   {
     titleEn: "Initial Branding for Sket Creative",
@@ -32,6 +33,7 @@ const portfolioItems = [
     technologies: ["Adobe Illustrator", "Adobe Photoshop", "Brand Identity Design"],
     slug: "sket-creative-initial-branding",
     image: "/SKET.png",
+    url: "https://sketcreative.com/",
   },
   {
     titleEn: "Hexavue Lab",
@@ -45,6 +47,7 @@ const portfolioItems = [
     technologies: ["Next.js", "React", "Tailwind CSS", "Figma"],
     slug: "hexavue-lab",
     image: "/Hexavue.png",
+    url: "https://hexavue.framer.ai",
   },
   {
     titleEn: "Creative Portfolio",
@@ -58,6 +61,7 @@ const portfolioItems = [
     technologies: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
     slug: "Creative-portfolio",
     image: "/photograph.png",
+    url: "https://nastasiaapw.framer.website",
   },
   {
     titleEn: "AI Sentiment Analysis Chatbot",
@@ -71,6 +75,7 @@ const portfolioItems = [
     technologies: ["Python", "TensorFlow", "NLP", "FastAPI", "React"],
     slug: "ai-sentiment-analysis-chatbot",
     image: "/chatbot.png",
+    url: "https://github.com/budiicahyonoo/NLP-Sentiment-Analysis.git",
   },
   {
     titleEn: "Realtime Recognition System",
@@ -84,6 +89,7 @@ const portfolioItems = [
     technologies: ["Python", "OpenCV", "TensorFlow", "YOLO", "FastAPI"],
     slug: "realtime-recognition-system",
     image: "/realtime.png",
+    url: "https://github.com/budiicahyonoo/Real-Time-Object-Detection.git",
   },
   {
     titleEn: "EatDeveloper Website",
@@ -97,6 +103,7 @@ const portfolioItems = [
     technologies: ["Next.js", "React", "Tailwind CSS", "Vercel"],
     slug: "eatdeveloper-web",
     image: "/development.png",
+    url: "https://github.com/budiicahyonoo/Mieayam010.git",
   },
   {
     titleEn: "Studuiotugasmu Platform",
@@ -110,6 +117,7 @@ const portfolioItems = [
     technologies: ["Next.js", "React", "Tailwind CSS", "Supabase"],
     slug: "studuiotugasmu-platform",
     image: "/studiotugasmu.png",
+    url: "https://tugasmu19.vercel.app/",
   },
 ]
 
@@ -126,7 +134,7 @@ export default function PortfolioPage() {
             {portfolioItems.map((item) => (
               <Link
                 key={item.slug}
-                href={`/portfolio/${item.slug}`}
+                href={item.url}
                 className="group relative overflow-hidden rounded-2xl border border-border/50 bg-card transition-all duration-300 hover:border-[#0066FF]/30 hover:shadow-xl hover:shadow-[#0066FF]/10"
               >
                 {/* Image */}
