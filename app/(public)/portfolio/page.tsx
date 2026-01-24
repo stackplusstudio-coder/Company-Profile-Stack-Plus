@@ -119,6 +119,42 @@ const portfolioItems = [
     image: "/studiotugasmu.png",
     url: "https://tugasmu19.vercel.app/",
   },
+  {
+    titleEn: "Alvi Ardhi Publishing",
+    titleId: "Alvi Ardhi Publishing",
+    descEn: "A digital platform designed to make it easier for readers to discover, explore, and purchase published works from local authors. It showcases book collections, author profiles, and articles related to literature, combining aesthetics and usability for an enjoyable reading experience.",
+    descId: "Platform digital yang dirancang untuk memudahkan pembaca menemukan, mengeksplorasi, dan membeli karya terbitan dari penulis lokal. Menampilkan koleksi buku, profil penulis, dan artikel terkait literatur dengan tampilan menarik dan mudah digunakan untuk pengalaman membaca yang menyenangkan.",
+    client: "Alvi Ardhi",
+    category: "Web Development",
+    technologies: ["Figma", "UI/UX Design"],
+    slug: "alvi-ardhi-publishing",
+    image: "/alvi.png",
+    url: "https://www.figma.com/design/7gnaq0TCeZpsQpq3HbXU2D/Alvi-Ardhi-Publishing?node-id=0-1&t=F4UtJCdvWDynPJle-1"
+  },
+  {
+    titleEn: "Areakerja.com",
+    titleId: "Areakerja.com",
+    descEn: "A digital platform that connects job seekers with companies offering employment opportunities across Indonesia. It simplifies the job search process by providing categorized listings, filters, and detailed job descriptions, allowing users to quickly find positions that match their skills, experience, and preferred work location.",
+    descId: "Platform digital yang menghubungkan pencari kerja dengan perusahaan yang menawarkan peluang kerja di seluruh Indonesia. Mempermudah proses pencarian kerja dengan menyediakan daftar lowongan yang terkategori, filter, dan deskripsi pekerjaan yang lengkap, sehingga pengguna dapat menemukan posisi yang sesuai dengan keterampilan, pengalaman, dan lokasi kerja yang diinginkan.",
+    client: "Areakerja.com",
+    category: "Web Development",
+    technologies: ["Next.js", "React", "Tailwind CSS", "Supabase"],
+    slug: "areakerja-com",
+    image: "/AreaKerja.png",
+    url: "https://areakerja.com"
+  },
+  {
+    titleEn: "Faheema Academy UI Design",
+    titleId: "Desain UI Faheema Academy",
+    descEn: "A UI design project for Faheema Academy focused on creating a clean, calm, and trustworthy interface for an Islamic education platform. The design emphasizes clear information hierarchy, ease of access to Islamic webinars, and Quran reading classes.",
+    descId: "Proyek desain UI untuk Faheema Academy yang berfokus pada tampilan antarmuka yang bersih, tenang, dan terpercaya sebagai platform edukasi Islami. Desain menekankan hierarki informasi yang jelas serta kemudahan akses ke webinar Islami dan kelas membaca Al-Qur’an.",
+    client: "Faheema Academy",
+    category: "UI Design",
+    technologies: ["Figma", "Design System", "UI Components"],
+    slug: "faheema-academy-ui-design",
+    image: "/Faheema.png",
+    url: "https://faheema-academy.my.id/"
+  },
 ]
 
 export default function PortfolioPage() {
