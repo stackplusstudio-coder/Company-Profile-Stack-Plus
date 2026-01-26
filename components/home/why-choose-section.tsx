@@ -1,39 +1,53 @@
 "use client"
 
-import { Zap, Shield, Users, Award } from "lucide-react"
+import { Target, Layers, TrendingUp, Cpu, Handshake } from "lucide-react"
 import { useI18n } from "@/lib/i18n/context"
 
 const features = [
   {
-    icon: Zap,
-    titleEn: "Fast Delivery",
-    titleId: "Pengiriman Cepat",
+    icon: Target,
+    titleEn: "Product-Driven Approach",
+    titleId: "Pendekatan Berbasis Produk",
     descEn:
-      "We deliver high-quality work on time, every time. Our agile process ensures rapid iteration and timely launches.",
+      "Every design and development decision is driven by user needs and business goals—not visual assumptions alone.",
     descId:
-      "Kami memberikan hasil kerja berkualitas tepat waktu. Proses agile kami memastikan iterasi cepat dan peluncuran tepat waktu.",
+      "Setiap keputusan desain dan pengembangan didasarkan pada kebutuhan pengguna dan tujuan bisnis, bukan sekadar asumsi visual.",
   },
   {
-    icon: Shield,
-    titleEn: "Secure & Reliable",
-    titleId: "Aman & Andal",
-    descEn: "Security is our priority. We build robust solutions with best practices in security and data protection.",
+    icon: Layers,
+    titleEn: "Design × Development in One Stack",
+    titleId: "Desain × Development dalam Satu Stack",
+    descEn:
+      "UI/UX, branding, web & app development, SEO optimization, and AI chatbots are integrated into a single workflow to deliver consistent and scalable results.",
     descId:
-      "Keamanan adalah prioritas kami. Kami membangun solusi kokoh dengan praktik terbaik dalam keamanan dan perlindungan data.",
+      "UI/UX, branding, pengembangan web & aplikasi, optimasi SEO, dan AI chatbot terintegrasi dalam satu alur kerja untuk hasil yang konsisten dan scalable.",
   },
   {
-    icon: Users,
-    titleEn: "Expert Team",
-    titleId: "Tim Ahli",
-    descEn: "Our talented team brings years of experience across design, development, and digital strategy.",
-    descId: "Tim berbakat kami membawa pengalaman bertahun-tahun di bidang desain, pengembangan, dan strategi digital.",
+    icon: TrendingUp,
+    titleEn: "Business-Oriented UX",
+    titleId: "UX Berorientasi Bisnis",
+    descEn:
+      "We focus on clear user flows, conversion, and experiences that actively support business growth.",
+    descId:
+      "Kami fokus pada user flow yang jelas, konversi, dan pengalaman yang secara aktif mendukung pertumbuhan bisnis.",
   },
   {
-    icon: Award,
-    titleEn: "Award Winning",
-    titleId: "Pemenang Penghargaan",
-    descEn: "Our work has been recognized by industry leaders for excellence in design and innovation.",
-    descId: "Karya kami telah diakui oleh pemimpin industri untuk keunggulan dalam desain dan inovasi.",
+    icon: Cpu,
+    titleEn: "Ready for Modern Digital Needs",
+    titleId: "Siap untuk Kebutuhan Digital Modern",
+    descEn:
+      "Our solutions are built to meet today’s digital demands: performance, scalability, and trust.",
+    descId:
+      "Solusi kami dirancang untuk memenuhi kebutuhan digital masa kini: performa, skalabilitas, dan kepercayaan.",
+  },
+  {
+    icon: Handshake,
+    titleEn: "Partner, Not Just Vendor",
+    titleId: "Partner, Bukan Sekadar Vendor",
+    descEn:
+      "We work as strategic partners who understand business context—not just project executors.",
+    descId:
+      "Kami bekerja sebagai partner strategis yang memahami konteks bisnis, bukan sekadar pelaksana proyek.",
   },
 ]
 

@@ -17,6 +17,12 @@ interface SettingsData {
   [key: string]: { value_en: string; value_id: string }
 }
 
+interface SiteSetting {
+  key: string
+  value_en?: string
+  value_id?: string
+}
+
 export default function AdminSettingsPage() {
   const [settings, setSettings] = useState<SettingsData>({})
   const [isLoading, setIsLoading] = useState(true)
@@ -33,7 +39,7 @@ export default function AdminSettingsPage() {
 
     if (data) {
       const settingsMap: SettingsData = {}
-      data.forEach((item) => {
+      data.forEach((item: SiteSetting) => {
         settingsMap[item.key] = {
           value_en: item.value_en || "",
           value_id: item.value_id || "",
@@ -71,14 +77,12 @@ export default function AdminSettingsPage() {
     setTimeout(() => setSaved(false), 3000)
   }
 
-  const settingsFields = [
-    { key: "company_name", label: "Company Name" },
-    { key: "tagline", label: "Tagline" },
-    { key: "email", label: "Email Address" },
-    { key: "phone", label: "Phone Number" },
-    { key: "address", label: "Address", multiline: true },
-    { key: "about_vision", label: "Vision Statement", multiline: true },
-    { key: "about_mission", label: "Mission Statement", multiline: true },
+  const valueFields = [
+    { key: "value_1", label: "Value 1" },
+    { key: "value_2", label: "Value 2" },
+    { key: "value_3", label: "Value 3" },
+    { key: "value_4", label: "Value 4" },
+    { key: "value_5", label: "Value 5" },
   ]
 
   const socialFields = [
@@ -114,30 +118,52 @@ export default function AdminSettingsPage() {
             <TabsContent key={lang} value={lang} className="space-y-6">
               <Card className="border-border/50 bg-card/50">
                 <CardHeader>
-                  <CardTitle>General Settings ({lang === "en" ? "English" : "Indonesian"})</CardTitle>
+                  <CardTitle>Company Values ({lang === "en" ? "English" : "Indonesian"})</CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4">
-                  {settingsFields.map((field) => (
-                    <div key={field.key} className="space-y-2">
-                      <Label htmlFor={`${field.key}_${lang}`}>{field.label}</Label>
-                      {field.multiline ? (
-                        <Textarea
-                          id={`${field.key}_${lang}`}
-                          value={settings[field.key]?.[`value_${lang}`] || ""}
-                          onChange={(e) => updateSetting(field.key, lang, e.target.value)}
-                          rows={3}
-                          className="bg-background resize-none"
-                        />
-                      ) : (
+                <CardContent className="space-y-6">
+                  {/* 3 values at the top */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    {valueFields.slice(0, 3).map((field) => (
+                      <div key={field.key} className="space-y-2">
+                        <Label htmlFor={`${field.key}_${lang}`}>{field.label}</Label>
                         <Input
                           id={`${field.key}_${lang}`}
                           value={settings[field.key]?.[`value_${lang}`] || ""}
                           onChange={(e) => updateSetting(field.key, lang, e.target.value)}
                           className="bg-background"
                         />
-                      )}
+                      </div>
+                    ))}
+                  </div>
+                  
+                  {/* Photo in the center */}
+                  <div className="flex justify-center py-4">
+                    <div className="space-y-2 w-full max-w-md">
+                      <Label htmlFor="company_photo">Company Photo</Label>
+                      <Input
+                        id="company_photo"
+                        value={settings["company_photo"]?.[`value_${lang}`] || ""}
+                        onChange={(e) => updateSetting("company_photo", lang, e.target.value)}
+                        className="bg-background"
+                        placeholder="Enter photo URL"
+                      />
                     </div>
-                  ))}
+                  </div>
+                  
+                  {/* 2 values at the bottom */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
+                    {valueFields.slice(3, 5).map((field) => (
+                      <div key={field.key} className="space-y-2">
+                        <Label htmlFor={`${field.key}_${lang}`}>{field.label}</Label>
+                        <Input
+                          id={`${field.key}_${lang}`}
+                          value={settings[field.key]?.[`value_${lang}`] || ""}
+                          onChange={(e) => updateSetting(field.key, lang, e.target.value)}
+                          className="bg-background"
+                        />
+                      </div>
+                    ))}
+                  </div>
                 </CardContent>
               </Card>
 

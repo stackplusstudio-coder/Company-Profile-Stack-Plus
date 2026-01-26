@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react"
+import { Instagram , Linkedin } from "lucide-react"
 import { useI18n } from "@/lib/i18n/context"
 
 export function Footer() {
@@ -19,13 +19,14 @@ export function Footer() {
     { href: "/services/ui-ux-design", label: t.services.uiux.title },
     { href: "/services/logo-branding", label: t.services.branding.title },
     { href: "/services/web-development", label: t.services.webdev.title },
+    { href: "/services/mobile-development", label: t.services.mobile.title },
+    { href: "/services/seo-optimization", label: t.services.seo.title },
+    { href: "/services/ai-chatbot", label: t.services.ai.title },
   ]
 
   const socialLinks = [
-    { href: "#", icon: Facebook, label: "Facebook" },
-    { href: "#", icon: Twitter, label: "Twitter" },
     { href: "https://www.instagram.com/stackplus.studio/", icon: Instagram, label: "Instagram" },
-    { href: "#", icon: Linkedin, label: "LinkedIn" },
+    { href: "https://www.linkedin.com/in/stackplustudio-stackplus-9440873a6/", icon: Linkedin, label: "LinkedIn" },
   ]
 
   return (

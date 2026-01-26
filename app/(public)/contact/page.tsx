@@ -50,8 +50,8 @@ export default function ContactPage() {
       icon: MapPin,
       labelEn: "Address",
       labelId: "Alamat",
-      valueEn: "Jl. Potato 6 No. 129, Tangerang, Banten",
-      valueId: "Jl. Kentang 6 No.129, Tangerang, Banten",
+      valueEn: "129 Potato Street No. 6, Tangerang, Banten, Indonesia",
+      valueId: "129 Kentang Street No. 6, Tangerang, Banten, Indonesia",
     },
     {
       icon: Mail,

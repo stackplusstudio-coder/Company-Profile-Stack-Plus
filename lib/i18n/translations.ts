@@ -34,6 +34,18 @@ export const translations = {
         title: "Web Development",
         description: "Transform your digital presence with cutting-edge, fast, and scalable web solutions.",
       },
+      mobile: {
+        title: "Mobile Development",
+        description: "Build high-performance mobile applications for iOS and Android.",
+      },
+      seo: {
+        title: "SEO Optimization",
+        description: "Improve visibility, rankings, and organic traffic with data-driven SEO strategies.",
+      },
+      ai: {
+        title: "AI Chatbot",
+        description: "Automate customer interactions with intelligent and scalable AI chatbots.",
+      },
     },
     // About
     about: {
@@ -145,6 +157,18 @@ export const translations = {
       webdev: {
         title: "Pengembangan Web",
         description: "Transformasi kehadiran digital Anda dengan solusi web mutakhir dan skalabel.",
+      },
+      mobile: {
+        title: "Pengembangan Aplikasi Mobile",
+        description: "Aplikasi mobile iOS dan Android dengan performa tinggi dan UX optimal.",
+      },
+      seo: {
+        title: "Optimasi SEO",
+        description: "Meningkatkan visibilitas dan traffic organik melalui strategi SEO berbasis data.",
+      },
+      ai: {
+        title: "AI Chatbot",
+        description: "Otomatisasi interaksi pelanggan dengan AI chatbot yang cerdas dan scalable.",
       },
     },
     // About
