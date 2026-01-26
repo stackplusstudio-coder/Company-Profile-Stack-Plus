@@ -205,7 +205,7 @@ export default function ContactPage() {
               {/* Map placeholder */}
               <div className="aspect-video overflow-hidden rounded-2xl border border-border/50 bg-muted">
                 <iframe
-                  src="https://www.google.com/maps/place/Jl.+Kentang+VI+No.129,+RT.001%2FRW.007,+Cibodasari,+Kec.+Cibodas,+Kota+Tangerang,+Banten+15138/@-6.2100065,106.6064641,21z/data=!4m5!3m4!1s0x2e69febde937ddc5:0x12dbb79f812cf069!8m2!3d-6.2099333!4d106.6066594?entry=tts&g_ep=EgoyMDI2MDEyMS4wIPu8ASoASAFQAw%3D%3D&skid=34eee37e-f2e2-4c89-82f7-99f14463887e"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.4048196142276!2d106.60390807409621!3d-6.210218160828834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69febded2d7335%3A0xd078a3967a2ba149!2sJl.%20Lombok%206%20Blok%2018%20No.121%2C%20RT.002%2FRW.007%2C%20Cibodasari%2C%20Kec.%20Cibodas%2C%20Kota%20Tangerang%2C%20Banten%2015138!5e0!3m2!1sid!2sid!4v1769412497509!5m2!1sid!2sid"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
